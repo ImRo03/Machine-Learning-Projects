@@ -49,5 +49,3 @@ Machine-Learning-Projects/
 └── Regression/
     └── Linear Regression Model on Advertising dataset.ipynb
 ```
-
-More projects will be added as I learn and implement additional Machine Learning algorithms.

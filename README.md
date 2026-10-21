@@ -28,9 +28,11 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 
 **Notebook:** [Linear Regression Model on Advertising dataset](Regression/Linear%20Regression%20Model%20on%20Advertising%20dataset.ipynb)
 
-**Dataset source:** [Introduction to Statistical Learning (ISLR) — Advertising data](https://www.statlearning.com/)
+**Dataset:** [Advertising.csv](Regression/Advertising.csv) — included in this repository.
 
-> Note: The notebook expects `Advertising.csv` to be available in its working directory. Download it from the source above before running the notebook.
+**Dataset source:** [Introduction to Statistical Learning (ISLR)](https://www.statlearning.com/)
+
+> Run the notebook with `Regression/` as the working directory so `pd.read_csv("Advertising.csv")` finds the dataset.
 
 ## Tools
 - Python

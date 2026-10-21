@@ -32,7 +32,7 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 
 **Dataset source:** [Introduction to Statistical Learning (ISLR)](https://www.statlearning.com/)
 
-> Run the notebook with `Regression/` as the working directory so `pd.read_csv("Advertising.csv")` finds the dataset.
+> The notebook automatically looks for `Advertising.csv` in either the current working directory or the `Regression/` subfolder, so it can be started from the repository root or the `Regression/` folder.
 
 ## Tools
 - Python

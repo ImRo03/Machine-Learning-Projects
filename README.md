@@ -34,6 +34,20 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 
 > The notebook automatically looks for `Advertising.csv` in either the current working directory or the `Regression/` subfolder, so it can be started from the repository root or the `Regression/` folder.
 
+### 2. Customer Churn Prediction — Classification
+**Folder:** `Classification/Customer-Churn-Prediction/`
+
+**Status:** In progress.
+
+A classification project focused on identifying customers at higher risk of leaving, with the goal of helping a business prioritize retention outreach.
+
+- Dataset: [Telco Customer Churn CSV](Classification/Customer-Churn-Prediction/data/Telco-Customer-Churn.csv)
+- Project brief and workflow: [Customer Churn README](Classification/Customer-Churn-Prediction/README.md)
+- Dataset has 7,043 customer records and the target column `Churn` (Yes/No).
+- Models, evaluation results, and business recommendations will be added only after we implement and evaluate them.
+
+Dataset source: [IBM Telco Customer Churn sample](https://github.com/IBM/telco-customer-churn-on-icp4d/blob/master/data/Telco-Customer-Churn.csv). It describes a fictional telecom company and is for educational/portfolio use, not a production customer dataset.
+
 ## Tools
 - Python
 - Pandas and NumPy
@@ -46,6 +60,12 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 ```text
 Machine-Learning-Projects/
 ├── README.md
-└── Regression/
-    └── Linear Regression Model on Advertising dataset.ipynb
+├── Regression/
+│   ├── Advertising.csv
+│   └── Linear Regression Model on Advertising dataset.ipynb
+└── Classification/
+    └── Customer-Churn-Prediction/
+        ├── README.md
+        └── data/
+            └── Telco-Customer-Churn.csv
 ```

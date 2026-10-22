@@ -5,7 +5,7 @@ Hands-on Machine Learning projects using Python, Pandas, NumPy, Matplotlib, Seab
 ## Projects
 
 ### 1. Advertising Sales Prediction — Linear Regression
-**Folder:** `Regression/`
+**Folder:** `Regression/Advertising-Sales-Prediction/`
 
 A regression project using the Advertising dataset to predict product sales from advertising budgets.
 
@@ -26,13 +26,13 @@ A regression project using the Advertising dataset to predict product sales from
 
 The three-feature model had a lower MAE on this test split. This is a result from one split, not proof that the same score will generalize to every sample.
 
-**Notebook:** [Linear Regression Model on Advertising dataset](Regression/Linear%20Regression%20Model%20on%20Advertising%20dataset.ipynb)
+**Notebook:** [Linear Regression Model on Advertising dataset](Regression/Advertising-Sales-Prediction/Linear%20Regression%20Model%20on%20Advertising%20dataset.ipynb)
 
-**Dataset:** [Advertising.csv](Regression/Advertising.csv) — included in this repository.
+**Dataset:** [Advertising.csv](Regression/Advertising-Sales-Prediction/Advertising.csv) — included in this repository.
 
 **Dataset source:** [Introduction to Statistical Learning (ISLR)](https://www.statlearning.com/)
 
-> The notebook automatically looks for `Advertising.csv` in either the current working directory or the `Regression/` subfolder, so it can be started from the repository root or the `Regression/` folder.
+> The notebook looks for `Advertising.csv` in either its own project folder or the repository root.
 
 ### 2. Medical Insurance Charges — Linear Regression Practice
 **Folder:** `Regression/Medical-Insurance-Cost-Prediction/`
@@ -74,8 +74,10 @@ Dataset source: [IBM Telco Customer Churn sample](https://github.com/IBM/telco-c
 Machine-Learning-Projects/
 ├── README.md
 ├── Regression/
-│   ├── Advertising.csv
-│   ├── Linear Regression Model on Advertising dataset.ipynb
+│   ├── Advertising-Sales-Prediction/
+│   │   ├── README.md
+│   │   ├── Advertising.csv
+│   │   └── Linear Regression Model on Advertising dataset.ipynb
 │   └── Medical-Insurance-Cost-Prediction/
 │       ├── README.md
 │       ├── insurance.csv

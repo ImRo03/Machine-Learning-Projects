@@ -47,7 +47,19 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 
 Dataset source: [Medical Insurance dataset](https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/insurance.csv).
 
-### 3. Customer Churn Prediction — Classification
+### 3. White Wine Quality Prediction — Decision Tree Regression
+**Folder:** `Regression/White-Wine-Quality-Prediction/`
+
+A regression practice project predicting wine quality from 11 physicochemical features.
+
+- Notebook: [Decision Tree Regression](Regression/White-Wine-Quality-Prediction/Decision%20Tree%20Regression.ipynb)
+- Dataset: [whitewines.csv](Regression/White-Wine-Quality-Prediction/whitewines.csv)
+- Project notes: [White Wine Quality README](Regression/White-Wine-Quality-Prediction/README.md)
+- Removed 937 exact duplicate rows from 4,898 observations, leaving 3,961 rows.
+- Compared Decision Tree depths 2 and 3 using validation MAE. Depth 3 had validation MAE 0.6070.
+- Final test MAE for the selected depth-3 model: 0.6261 on this split.
+
+### 4. Customer Churn Prediction — Classification
 **Folder:** `Classification/Customer-Churn-Prediction/`
 
 **Status:** In progress.
@@ -78,10 +90,14 @@ Machine-Learning-Projects/
 │   │   ├── README.md
 │   │   ├── Advertising.csv
 │   │   └── Linear Regression Model on Advertising dataset.ipynb
-│   └── Medical-Insurance-Cost-Prediction/
+│   ├── Medical-Insurance-Cost-Prediction/
+│   │   ├── README.md
+│   │   ├── insurance.csv
+│   │   └── insurance_linear_regression_practice.ipynb
+│   └── White-Wine-Quality-Prediction/
 │       ├── README.md
-│       ├── insurance.csv
-│       └── insurance_linear_regression_practice.ipynb
+│       ├── whitewines.csv
+│       └── Decision Tree Regression.ipynb
 └── Classification/
     └── Customer-Churn-Prediction/
         ├── README.md

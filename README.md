@@ -34,7 +34,20 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 
 > The notebook automatically looks for `Advertising.csv` in either the current working directory or the `Regression/` subfolder, so it can be started from the repository root or the `Regression/` folder.
 
-### 2. Customer Churn Prediction — Classification
+### 2. Medical Insurance Charges — Linear Regression Practice
+**Folder:** `Regression/Medical-Insurance-Cost-Prediction/`
+
+**Status:** Foundational practice completed; the full regression study will continue later.
+
+- Notebook: [insurance_linear_regression_practice.ipynb](Regression/Medical-Insurance-Cost-Prediction/insurance_linear_regression_practice.ipynb)
+- Dataset: [insurance.csv](Regression/Medical-Insurance-Cost-Prediction/insurance.csv)
+- Project notes and run instructions: [README](Regression/Medical-Insurance-Cost-Prediction/README.md)
+- Current model uses only `age`, `bmi`, and `children`; categorical encoding and further regression evaluation are not yet covered.
+- On one 80/20 split, the baseline MAE was 9,861.80 and Linear Regression MAE was 9,620.93. These are introductory results, not a finished or optimized model.
+
+Dataset source: [Medical Insurance dataset](https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/insurance.csv).
+
+### 3. Customer Churn Prediction — Classification
 **Folder:** `Classification/Customer-Churn-Prediction/`
 
 **Status:** In progress.
@@ -62,7 +75,11 @@ Machine-Learning-Projects/
 ├── README.md
 ├── Regression/
 │   ├── Advertising.csv
-│   └── Linear Regression Model on Advertising dataset.ipynb
+│   ├── Linear Regression Model on Advertising dataset.ipynb
+│   └── Medical-Insurance-Cost-Prediction/
+│       ├── README.md
+│       ├── insurance.csv
+│       └── insurance_linear_regression_practice.ipynb
 └── Classification/
     └── Customer-Churn-Prediction/
         ├── README.md

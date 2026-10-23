@@ -1,10 +1,10 @@
-# White Wine Quality Prediction — Decision Tree Regression
+# White Wine Quality Prediction — Decision Tree & Random Forest Regression
 
-**Status:** Completed foundational practice; further regression topics will be continued separately.
+**Status:** Foundational regression practice completed; further ML topics will continue separately.
 
 ## Objective
 
-Use a Decision Tree Regressor to predict wine quality from physicochemical measurements, then compare tree depth settings using validation MAE.
+Predict numerical wine-quality ratings from physicochemical measurements and practise model training, validation, MAE evaluation, and model comparison.
 
 ## Dataset
 
@@ -15,34 +15,47 @@ Use a Decision Tree Regressor to predict wine quality from physicochemical measu
 - **Target:** `quality`.
 - **Input features:** 11 wine measurements.
 
-## Workflow
+## Notebooks
 
-1. Inspect the dataset, data types, missing values, summary statistics, and duplicate records.
-2. Remove exact duplicate rows.
-3. Separate input features (`X`) from the target (`y`).
-4. Create a training/test split, then create a validation split from the training data.
-5. Train an unrestricted Decision Tree and inspect training versus validation MAE.
-6. Compare `max_depth=2` and `max_depth=3` on the same validation split.
-7. Train the selected depth-3 model on the full training split and report final test MAE.
+### 1. Decision Tree Regression
 
-## Results from this split
+[Open Decision Tree Regression.ipynb](Decision%20Tree%20Regression.ipynb)
 
-| Model | Training MAE | Validation MAE |
-|---|---:|---:|
-| Unrestricted Decision Tree | 0.0000 | 0.6830 |
-| Decision Tree, `max_depth=2` | 0.6141 | 0.6341 |
-| Decision Tree, `max_depth=3` | 0.5868 | 0.6070 |
+- Compared `max_depth=2` and `max_depth=3` using validation MAE.
+- Depth 3 had the lower validation MAE among those two candidates.
 
-The depth-3 model had a lower validation MAE than depth 2 among the two configurations compared.
+### 2. Random Forest Regression
 
-**Final test MAE for the depth-3 model:** 0.6261.
+[Open Random_Forest.ipynb](Random_Forest.ipynb)
 
-These scores describe this particular split and practice experiment; they do not guarantee the same result on other samples. In a production evaluation, keep the test set untouched while selecting hyperparameters.
+- Trained a Random Forest with `n_estimators=100`.
+- Compared training and validation MAE, then evaluated a model trained on the full training split on the test split.
+
+## Results from these practice splits
+
+| Model | Training MAE | Validation MAE | Test MAE |
+|---|---:|---:|---:|
+| Decision Tree, `max_depth=3` | 0.5868 | 0.6070 | 0.6261 |
+| Random Forest, 100 trees | 0.2016 | 0.5482 | 0.5689 |
+
+The Random Forest had lower validation and test MAE than the depth-3 Decision Tree in this exercise. Its much lower training MAE than validation MAE also indicates a generalization gap.
+
+These are educational results from particular splits, not guarantees of future performance. In a strict benchmark, keep the test set untouched until the full model-selection process is complete.
+
+## Workflow covered
+
+1. Inspect and clean tabular data.
+2. Separate features (`X`) and target (`y`).
+3. Create training, validation, and test sets.
+4. Train regression models using `.fit()`.
+5. Generate predictions using `.predict()`.
+6. Calculate MAE and compare models on validation data.
+7. Evaluate a selected configuration on test data.
 
 ## Run locally
 
-1. Keep `Decision Tree Regression.ipynb` and `whitewines.csv` in this folder.
-2. Open the notebook in Jupyter.
-3. Run the cells from top to bottom.
+1. Keep both notebooks and `whitewines.csv` in this folder.
+2. Open a notebook in Jupyter.
+3. Run its cells from top to bottom.
 
 Required libraries: `pandas` and `scikit-learn`.

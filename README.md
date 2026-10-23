@@ -100,7 +100,8 @@ Machine-Learning-Projects/
 │   └── White-Wine-Quality-Prediction/
 │       ├── README.md
 │       ├── whitewines.csv
-│       └── Decision Tree Regression.ipynb
+│       ├── Decision Tree Regression.ipynb
+│       └── Random_Forest.ipynb
 └── Classification/
     └── Customer-Churn-Prediction/
         ├── README.md

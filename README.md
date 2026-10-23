@@ -47,19 +47,22 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 
 Dataset source: [Medical Insurance dataset](https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/insurance.csv).
 
-### 3. White Wine Quality Prediction — Decision Tree Regression
+### 3. White Wine Quality Prediction — Decision Tree & Random Forest Regression
 **Folder:** `Regression/White-Wine-Quality-Prediction/`
 
-A regression practice project predicting wine quality from 11 physicochemical features.
+Predict wine quality from 11 physicochemical features and practise validation-based model comparison.
 
 - Notebook: [Decision Tree Regression](Regression/White-Wine-Quality-Prediction/Decision%20Tree%20Regression.ipynb)
+- Notebook: [Random Forest Regression](Regression/White-Wine-Quality-Prediction/Random_Forest.ipynb)
 - Dataset: [whitewines.csv](Regression/White-Wine-Quality-Prediction/whitewines.csv)
 - Project notes: [White Wine Quality README](Regression/White-Wine-Quality-Prediction/README.md)
 - Removed 937 exact duplicate rows from 4,898 observations, leaving 3,961 rows.
-- Compared Decision Tree depths 2 and 3 using validation MAE. Depth 3 had validation MAE 0.6070.
-- Final test MAE for the selected depth-3 model: 0.6261 on this split.
+- Decision Tree (`max_depth=3`) validation MAE: 0.6070; test MAE: 0.6261.
+- Random Forest (100 trees) validation MAE: 0.5482; test MAE: 0.5689.
 
-### 4. Customer Churn Prediction — Classification
+These are educational results from the splits used in the notebooks; they are not guaranteed performance estimates for future data.
+
+### 4. Customer Churn Prediction — Classification### 4. Customer Churn Prediction — Classification
 **Folder:** `Classification/Customer-Churn-Prediction/`
 
 **Status:** In progress.

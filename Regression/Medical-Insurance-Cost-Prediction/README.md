@@ -1,56 +1,48 @@
-# Medical Insurance Charges — Linear Regression Practice
+# Medical Insurance Charges — Practice
 
-**Status:** In progress — foundational practice completed; the full regression study will continue later.
-
-## Objective
-
-Explore a medical insurance dataset and build an initial Linear Regression model to predict insurance charges using three numerical features: age, BMI, and number of children.
+I'm using this folder to practise regression and the data preparation that happens before model training. Some cells in the preprocessing notebook use small made-up examples just to understand each step.
 
 ## Dataset
 
-- **Local file:** [insurance.csv](insurance.csv) — included in this folder.
+- **File:** [insurance.csv](insurance.csv)
 - **Source:** [Medical Insurance dataset on GitHub](https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/insurance.csv)
-- **Shape before duplicate removal:** 1,338 rows × 7 columns.
+- **Original shape:** 1,338 rows × 7 columns.
 - **Target:** `charges`.
-- **Features currently used:** `age`, `bmi`, `children`.
-- **Other available features:** `sex`, `smoker`, and `region`. These categorical features are not yet included in the model because encoding and preprocessing will be covered later.
+- **Features:** `age`, `sex`, `bmi`, `children`, `smoker`, and `region`.
 
-## Work completed so far
+## Notebooks
 
-1. Loaded and inspected the dataset with Pandas.
-2. Checked descriptive statistics, missing values, and duplicate rows.
-3. Found and removed one duplicate record.
-4. Explored average charges by smoking status.
-5. Visualized age vs. charges and BMI vs. charges, including a comparison by smoking status.
-6. Split data into training and test sets using an 80/20 split with `random_state=42`.
-7. Built a mean-prediction baseline.
-8. Trained an initial Linear Regression model using `age`, `bmi`, and `children`.
-9. Compared actual vs. predicted charges and inspected examples with large prediction errors.
+### 1. Linear Regression Practice
 
-## Initial results
+[Open insurance_linear_regression_practice.ipynb](insurance_linear_regression_practice.ipynb)
 
-| Model | Test MAE |
-|---|---:|
-| Mean baseline | 9,861.80 |
-| Linear Regression | 9,620.93 |
+This notebook covers loading and inspecting the dataset, basic EDA, checking duplicates and missing values, making a train/test split, building a mean baseline, and training a first Linear Regression model with numerical features.
 
-The initial Linear Regression model improves MAE by approximately 2.44% compared with the mean baseline on this test split. The improvement is modest, and the model underpredicts some customers with high charges.
+The initial test MAE was 9,620.93, compared with 9,861.80 for the mean baseline on the same split. These are results from this practice exercise, not a guarantee of future performance.
 
-The EDA shows higher average charges among smokers in this dataset. This is an observed association; the analysis alone does not establish causation.
+### 2. Data Preprocessing and Data Pipeline
 
-## Run the notebook
+[Open Data Preprocessing and Data Pipeline.ipynb](Data%20Preprocessing%20and%20Data%20Pipeline.ipynb)
 
-1. Download or clone this repository.
-2. Open [`insurance_linear_regression_practice.ipynb`](insurance_linear_regression_practice.ipynb) in Jupyter Notebook or JupyterLab.
-3. Ensure `insurance.csv` stays in the same folder as the notebook.
-4. Run the notebook cells from top to bottom.
+In this notebook I practised:
 
-Required Python libraries: `pandas`, `matplotlib`, `seaborn`, and `scikit-learn`.
+- Using a `Pipeline` to connect preprocessing and a model.
+- Using `fit()` to train and `predict()` to make predictions.
+- Using `ColumnTransformer` to apply different steps to selected columns and pass numerical columns through unchanged.
+- Understanding data leakage and fitting preprocessing on training data only.
+- Filling missing numerical values with `SimpleImputer`, using the median or most frequent value.
+- Filling missing categorical values before using `OneHotEncoder`.
+- Handling unseen categories with `handle_unknown="ignore"`.
+- Combining numerical and categorical preprocessing Pipelines before Linear Regression.
+- Checking predictions against actual values and calculating MAE.
+- Feature scaling with `StandardScaler` and `MinMaxScaler`.
+- Detecting potential outliers with boxplots, the IQR method, and Z-scores.
+- Capping values with `.clip()`, trying log transformation with `np.log1p()`, and comparing skewness.
 
-The notebook is stored without saved cell outputs; run the cells to regenerate tables and plots.
+A main thing I learned is not to delete an unusual value just because it looks like an outlier. First check whether it is a real value or a data error.
 
-## Remaining learning topics
+## Running the notebooks
 
-This is not the final version of the regression study. Planned follow-up topics include R², encoding categorical features, preprocessing pipelines, feature/model comparisons, and further regression algorithms after they are learned.
+Keep `insurance.csv` in this folder, open a notebook in Jupyter Notebook or JupyterLab, and run the cells from top to bottom.
 
-This repository documents a learning exercise; model results should not be treated as professional medical or insurance advice.
+Libraries used across these notebooks include Pandas, NumPy, Matplotlib, Seaborn, SciPy, and scikit-learn.

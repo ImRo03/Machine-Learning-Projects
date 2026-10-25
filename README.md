@@ -37,12 +37,13 @@ The three-feature model had a lower MAE on this test split. This is a result fro
 ### 2. Medical Insurance Charges — Linear Regression Practice
 **Folder:** `Regression/Medical-Insurance-Cost-Prediction/`
 
-**Status:** Foundational practice completed; the full regression study will continue later.
+**Status:** Regression and preprocessing practice.
 
 - Notebook: [insurance_linear_regression_practice.ipynb](Regression/Medical-Insurance-Cost-Prediction/insurance_linear_regression_practice.ipynb)
+- Notebook: [Data Preprocessing and Data Pipeline](Regression/Medical-Insurance-Cost-Prediction/Data%20Preprocessing%20and%20Data%20Pipeline.ipynb) — practice with imputation, encoding, Pipelines, scaling, and outliers.
 - Dataset: [insurance.csv](Regression/Medical-Insurance-Cost-Prediction/insurance.csv)
 - Project notes and run instructions: [README](Regression/Medical-Insurance-Cost-Prediction/README.md)
-- Current model uses only `age`, `bmi`, and `children`; categorical encoding and further regression evaluation are not yet covered.
+- The first model uses `age`, `bmi`, and `children`. The separate preprocessing notebook covers categorical encoding and preprocessing workflows with small examples.
 - On one 80/20 split, the baseline MAE was 9,861.80 and Linear Regression MAE was 9,620.93. These are introductory results, not a finished or optimized model.
 
 Dataset source: [Medical Insurance dataset](https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/insurance.csv).
@@ -96,7 +97,8 @@ Machine-Learning-Projects/
 │   ├── Medical-Insurance-Cost-Prediction/
 │   │   ├── README.md
 │   │   ├── insurance.csv
-│   │   └── insurance_linear_regression_practice.ipynb
+│   │   ├── insurance_linear_regression_practice.ipynb
+│   │   └── Data Preprocessing and Data Pipeline.ipynb
 │   └── White-Wine-Quality-Prediction/
 │       ├── README.md
 │       ├── whitewines.csv
